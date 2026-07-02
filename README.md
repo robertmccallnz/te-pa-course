@@ -59,6 +59,6 @@ This is designed to be forked. Common patterns:
 
 ## Whakapapa
 
-Written by **Robert McCall** for **[The Kiwi Dialectic](https://www.kiwidialectic.com)**. Ngā mihi ki ngā hapori Māori nāna i whakatakoto te whāriki — to the Māori communities who laid the mat this course stands on.
+Written by **Robert McCall** for **[The Kiwi Dialectic](https://robertmccallnz.github.io/six-thinkers/)**. Ngā mihi ki ngā hapori Māori nāna i whakatakoto te whāriki — to the Māori communities who laid the mat this course stands on.
 
 Companion courses: [ai-warrior](https://github.com/robertmccallnz/ai-warrior) · [ai-literacy-for-families](https://github.com/robertmccallnz/ai-literacy-for-families) · [cooperative-aotearoa](https://github.com/robertmccallnz/cooperative-aotearoa).
