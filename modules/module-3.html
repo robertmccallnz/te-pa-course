@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 3: AI me te raupatu matihiko — The Kiwi Dialectic</title>
+  <meta name="description" content="AI and digital extraction — tracing the colonial logic inside machine learning. Te Pā Tūwatawata course, The Kiwi Dialectic." />
+  <meta property="og:title" content="Module 3: AI me te raupatu matihiko" />
+  <meta property="og:description" content="AI and digital extraction — tracing the colonial logic inside machine learning." />
+  <meta property="og:image" content="https://te-pa.org/assets/social/kiwi-dialectic-x-card.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/kiwi-dialectic.css" />
+  <link rel="stylesheet" href="../assets/css/hotere-patch.css" />
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#c0392b">
+  <link rel="canonical" href="https://te-pa.org/modules/module-3.html"/>
+</head>
+<body>
+  <span class="motif-stripe" role="presentation" aria-hidden="true"></span>
+  <div class="shell--narrow" style="padding-top:0">
+    <nav class="site-nav">
+      <a class="nav-brand" href="https://www.kiwidialectic.com" target="_blank" rel="noopener noreferrer">The Kiwi Dialectic</a>
+      <div class="nav-links">
+        <a href="../index.html">All Modules</a>
+        <a href="../index.html#sources">Sources</a>
+        <button class="theme-btn" id="themeToggle">Dark</button>
+      </div>
+    </nav>
+
+    <!-- Kōwhaiwhai band — whakapapa -->
+    <div class="motif-band" role="presentation" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 44" width="100%" height="44" preserveAspectRatio="xMidYMid slice">
+        <rect width="600" height="44" fill="#111"/>
+        <polygon points="0.0,0 25.0,0 12.5,16" fill="#c0392b"/>
+        <polygon points="25.0,0 50.0,0 37.5,16" fill="#c0392b"/>
+        <polygon points="50.0,0 75.0,0 62.5,16" fill="#c0392b"/>
+        <polygon points="75.0,0 100.0,0 87.5,16" fill="#c0392b"/>
+        <polygon points="100.0,0 125.0,0 112.5,16" fill="#c0392b"/>
+        <polygon points="125.0,0 150.0,0 137.5,16" fill="#c0392b"/>
+        <polygon points="150.0,0 175.0,0 162.5,16" fill="#c0392b"/>
+        <polygon points="175.0,0 200.0,0 187.5,16" fill="#c0392b"/>
+        <polygon points="200.0,0 225.0,0 212.5,16" fill="#c0392b"/>
+        <polygon points="225.0,0 250.0,0 237.5,16" fill="#c0392b"/>
+        <polygon points="250.0,0 275.0,0 262.5,16" fill="#c0392b"/>
+        <polygon points="275.0,0 300.0,0 287.5,16" fill="#c0392b"/>
+        <polygon points="300.0,0 325.0,0 312.5,16" fill="#c0392b"/>
+        <polygon points="325.0,0 350.0,0 337.5,16" fill="#c0392b"/>
+        <polygon points="350.0,0 375.0,0 362.5,16" fill="#c0392b"/>
+        <polygon points="375.0,0 400.0,0 387.5,16" fill="#c0392b"/>
+        <polygon points="400.0,0 425.0,0 412.5,16" fill="#c0392b"/>
+        <polygon points="425.0,0 450.0,0 437.5,16" fill="#c0392b"/>
+        <polygon points="450.0,0 475.0,0 462.5,16" fill="#c0392b"/>
+        <polygon points="475.0,0 500.0,0 487.5,16" fill="#c0392b"/>
+        <polygon points="500.0,0 525.0,0 512.5,16" fill="#c0392b"/>
+        <polygon points="525.0,0 550.0,0 537.5,16" fill="#c0392b"/>
+        <polygon points="550.0,0 575.0,0 562.5,16" fill="#c0392b"/>
+        <polygon points="575.0,0 600.0,0 587.5,16" fill="#c0392b"/>
+        <line x1="0" y1="22" x2="600" y2="22" stroke="#f0efe9" stroke-width=".5" stroke-opacity=".2"/>
+      </svg>
+    </div>
+
+    <p class="breadcrumb" style="margin-top:20px">
+      <a href="../index.html">Te Pā Tūwatawata</a>
+      <span class="breadcrumb-sep">/</span>
+      Module 3
+    </p>
+
+    <article>
+      <p class="module-tag">Module 3 of 6</p>
+      <h1>AI me te raupatu matihiko</h1>
+      <p class="subtitle">AI and digital extraction — tracing the colonial logic inside machine learning.</p>
+
+      <!-- Module motif banner -->
+      <div style="display:flex;align-items:center;gap:18px;background:var(--bg-raised);border-radius:14px;padding:18px 20px;margin:0 0 36px;border:1px solid var(--border)">
+      <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:80px;height:50px;flex-shrink:0">
+        <rect width="80" height="50" fill="#111" rx="6"/>
+        <polygon points="0,0 16,0 8,18" fill="#c0392b"/>
+        <polygon points="16,0 32,0 24,18" fill="#c0392b"/>
+        <polygon points="32,0 48,0 40,18" fill="#c0392b"/>
+        <polygon points="48,0 64,0 56,18" fill="#c0392b"/>
+        <polygon points="64,0 80,0 72,18" fill="#c0392b"/>
+        <polygon points="0,50 16,50 8,32" fill="#f0efe9" fill-opacity=".7"/>
+        <polygon points="16,50 32,50 24,32" fill="#f0efe9" fill-opacity=".7"/>
+        <polygon points="32,50 48,50 40,32" fill="#f0efe9" fill-opacity=".7"/>
+        <polygon points="48,50 64,50 56,32" fill="#f0efe9" fill-opacity=".7"/>
+        <polygon points="64,50 80,50 72,32" fill="#f0efe9" fill-opacity=".7"/>
+      </svg>
+        <div>
+          <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:4px">Tohu o tēnei akoranga — Module symbol</div>
+          <strong style="font-family:var(--font-serif)">Niho taniwha</strong>
+          <p style="font-size:.88rem;color:var(--fg-muted);margin:4px 0 0">taniwha teeth — resistance, warrior strength against extraction</p>
+        </div>
+      </div>
+
+      <!-- Symbol meaning note -->
+      <p style="font-size:.92rem;color:var(--fg-muted);border-left:3px solid var(--accent);padding:10px 16px;background:var(--bg-raised);border-radius:0 10px 10px 0;margin-bottom:36px">This module carries <strong>niho taniwha</strong> — the teeth of the taniwha. The taniwha is not simply a monster; it is a guardian of boundaries. When data is extracted without consent, the taniwha teeth are the challenge: who has the right to cross this threshold?</p>
+
+      <h2>He kupu whakataki — Introduction</h2>
+      <p>Raupatu — dispossession — is one of the defining words of Māori history. It describes the large-scale confiscation of Māori land under the New Zealand Settlements Act 1863. Today, a new form of raupatu is underway: the extraction of Māori data, cultural knowledge, and linguistic heritage by AI systems built and owned by corporations with no relationship to Māori communities.</p>
+      <p>This module examines the structural logic of AI development and asks: in what ways does the current AI economy reproduce the extractive patterns of colonialism?</p>
+
+      <div class="pull-quote">"The model is trained on your words, your stories, your knowledge. The profit goes to Silicon Valley. This is colonialism with better graphics."</div>
+      <h2>How AI systems extract cultural data</h2>
+      <p>Large language models (LLMs) like GPT-4 and its successors are trained on massive datasets assembled from the internet. These datasets include vast quantities of te reo Māori text, Indigenous knowledge, oral traditions transcribed and published online, and community-generated content — all gathered without consent, and all used to build commercial products.</p>
+      <ul>
+        <li><strong>Web collection at scale</strong> — AI companies collect publicly accessible text from across the internet, including iwi websites, academic archives, and digital heritage collections.</li>
+        <li><strong>Language model training</strong> — this data is used to train models that can generate text and perform translations in te reo Māori — a capability that has commercial value.</li>
+        <li><strong>No attribution, no consent, no benefit-sharing</strong> — the communities whose knowledge made these capabilities possible receive nothing.</li>
+      </ul>
+      <h2>The myth of "public data"</h2>
+      <p>AI companies defend these practices by pointing to the "public" status of the data they collect. This argument fails on multiple grounds:</p>
+      <ul>
+        <li>Māori communities often publish cultural content online for community benefit, not for extraction by corporations.</li>
+        <li>The concept of "public" in Western law does not map onto tikanga frameworks, which distinguish between knowledge that is freely shareable and knowledge that carries restrictions (tapu).</li>
+        <li>Legal availability does not imply ethical permission — a principle recognised even within mainstream research ethics.</li>
+      </ul>
+      <div class="pull-quote">"Just because you can take something does not mean you have the right to take it. Māori knew this long before intellectual property law existed."</div>
+      <h2>AI, power, and political economy</h2>
+      <p>The AI economy is highly concentrated. A small number of US corporations — OpenAI (backed by Microsoft), Google, Meta, Amazon — dominate foundational AI development. These corporations operate under US law, answer to US shareholders, and are not subject to tikanga Māori, Treaty obligations, or New Zealand sovereignty claims over Māori cultural data.</p>
+      <p>This concentration of AI capability mirrors the concentration of colonial land ownership in the 19th century. The mechanisms differ, but the underlying dynamic — the capture of collective resources by private actors — is structurally similar.</p>
+      <h2>Key concepts</h2>
+      <ul class="concept-list">
+        <li><span class="concept-term">Raupatu matihiko</span> Digital dispossession; extraction of Māori data without consent</li>
+        <li><span class="concept-term">Large language model</span> An AI system trained on large quantities of text data</li>
+        <li><span class="concept-term">Training data</span> The dataset used to build an AI model</li>
+        <li><span class="concept-term">Tapu</span> The sacred or restricted status of certain knowledge and cultural material</li>
+      </ul>
+
+      <!-- Niho taniwha separator before questions -->
+      <div role="presentation" aria-hidden="true" style="margin:32px 0 0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 16" width="100%" height="16" preserveAspectRatio="xMidYMid slice">
+          <rect width="600" height="16" fill="var(--mangu,#111)"/>
+          <polygon points="0.0,0 25.0,0 12.5,16" fill="#c0392b"/>
+        <polygon points="25.0,0 50.0,0 37.5,16" fill="#c0392b"/>
+        <polygon points="50.0,0 75.0,0 62.5,16" fill="#c0392b"/>
+        <polygon points="75.0,0 100.0,0 87.5,16" fill="#c0392b"/>
+        <polygon points="100.0,0 125.0,0 112.5,16" fill="#c0392b"/>
+        <polygon points="125.0,0 150.0,0 137.5,16" fill="#c0392b"/>
+        <polygon points="150.0,0 175.0,0 162.5,16" fill="#c0392b"/>
+        <polygon points="175.0,0 200.0,0 187.5,16" fill="#c0392b"/>
+        <polygon points="200.0,0 225.0,0 212.5,16" fill="#c0392b"/>
+        <polygon points="225.0,0 250.0,0 237.5,16" fill="#c0392b"/>
+        <polygon points="250.0,0 275.0,0 262.5,16" fill="#c0392b"/>
+        <polygon points="275.0,0 300.0,0 287.5,16" fill="#c0392b"/>
+        <polygon points="300.0,0 325.0,0 312.5,16" fill="#c0392b"/>
+        <polygon points="325.0,0 350.0,0 337.5,16" fill="#c0392b"/>
+        <polygon points="350.0,0 375.0,0 362.5,16" fill="#c0392b"/>
+        <polygon points="375.0,0 400.0,0 387.5,16" fill="#c0392b"/>
+        <polygon points="400.0,0 425.0,0 412.5,16" fill="#c0392b"/>
+        <polygon points="425.0,0 450.0,0 437.5,16" fill="#c0392b"/>
+        <polygon points="450.0,0 475.0,0 462.5,16" fill="#c0392b"/>
+        <polygon points="475.0,0 500.0,0 487.5,16" fill="#c0392b"/>
+        <polygon points="500.0,0 525.0,0 512.5,16" fill="#c0392b"/>
+        <polygon points="525.0,0 550.0,0 537.5,16" fill="#c0392b"/>
+        <polygon points="550.0,0 575.0,0 562.5,16" fill="#c0392b"/>
+        <polygon points="575.0,0 600.0,0 587.5,16" fill="#c0392b"/>
+        </svg>
+      </div>
+
+      <div class="question-box">
+        <h3>Pātai — Discussion questions</h3>
+        <ol>
+          <li>Is the training of AI models on publicly available Māori language data a form of raupatu? Defend your answer.</li>
+          <li>How does the concentration of AI development in US corporations create particular risks for Indigenous communities globally?</li>
+          <li>What practical mechanisms could give Māori communities meaningful control over how their data is used in AI training?</li>
+          <li>Is there a version of AI development that would be acceptable from a Māori data sovereignty perspective? What would it look like?</li>
+        </ol>
+      </div>
+    </article>
+
+    <div class="nav-between">
+      <a href="module-2.html">← Module 2</a>
+      <a href="module-4.html">Module 4 →</a>
+    </div>
+
+    <!-- ── SOCIAL FIREPOWER + LEARNING ──────────────────────────────────── -->
+    <section style="margin-top:2.5rem;padding-top:2rem;border-top:2px solid var(--accent,#c0392b)">
+      <div class="section-head">
+        <p class="section-tag">Tiaki · Toha — Share &amp; learn</p>
+        <h2>AI and Digital Extraction — Social toolkit</h2>
+      </div>
+
+      <!-- Activity -->
+      <div style="background:var(--bg-raised,#1a1a1a);border:1px solid var(--border,#ffffff22);border-left:4px solid var(--accent,#c0392b);border-radius:0 12px 12px 0;padding:20px 24px;margin:1.5rem 0">
+        <p style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent,#c0392b);font-weight:700;margin:0 0 6px">Activity — Raupatu audit</p>
+        <p style="font-size:.9rem;line-height:1.65;margin:0">Name one AI product that uses indigenous data without consent. Research it: who built it, what data did it train on, who profits, who loses? Write 200 words or present it as a thread.</p>
+      </div>
+
+      <!-- Tweet/X copy -->
+      <p class="section-tag" style="margin-bottom:.6rem">X / Twitter — copy and post</p>
+      <div style="background:var(--bg-code,#111);border-radius:8px;padding:14px 18px;margin-bottom:1.5rem">
+        <p style="font-family:monospace;font-size:.83rem;line-height:1.7;white-space:pre-wrap;color:#f4f0e8;margin:0">AI companies are training on Māori voices, faces, waiata, and stories without consent. Different century, same logic as the land wars. He raupatu tonu tēnei. Module 3 👉 [link] #AIActivism #MāoriDataSovereignty #Raupatu</p>
+      </div>
+
+      <!-- Instagram copy -->
+      <p class="section-tag" style="margin-bottom:.6rem">Instagram — copy and post</p>
+      <div style="background:var(--bg-code,#111);border-radius:8px;padding:14px 18px;margin-bottom:1.5rem">
+        <p style="font-family:monospace;font-size:.83rem;line-height:1.7;white-space:pre-wrap;color:#f4f0e8;margin:0">The taniwha's teeth are at the threshold. Every time an AI trains on Māori data without consent, that's a bite. He raupatu tonu tēnei. Free course. Link in bio. #KiwiDialectic #AIActivism</p>
+      </div>
+
+      <!-- Thread -->
+      <p class="section-tag" style="margin-bottom:.6rem">X thread — copy, customise, fire</p>
+      <div style="background:var(--bg-code,#111);border-radius:8px;padding:14px 18px;margin-bottom:1.5rem">
+        <p style="font-family:monospace;font-size:.83rem;line-height:1.8;white-space:pre-wrap;color:#f4f0e8;margin:0">1/ AI is the latest form of raupatu. Let me show you what I mean. 🧵
+
+2/ Raupatu = confiscation. 1860s New Zealand: the Crown took Māori land without consent or compensation. Millions of acres. Entire tribal territories. It was legal. It was still theft.
+
+3/ In 2024: AI companies take Māori language data, oral recordings, faces, stories, and waiata to train their models. Without consent. Without compensation. It's legal. It's still theft.
+
+4/ The mechanism is different — data pipelines instead of the Native Lands Court. But the structure is identical: extract value from indigenous people, privatise the profit, leave the community with nothing.
+
+5/ The resistance looks different too: Te Pā Tūwatawata, Te Hiku Media's kaitiakitanga AI policy, Te Mana Raraunga. Building the palisades. Free course 👉 [link] #AIActivism #Raupatu #MāoriDataSovereignty</p>
+      </div>
+
+      <!-- Download image -->
+      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+        <a href="../social-kit/platform/platform-x-niho-ai.png" download style="display:inline-block;padding:10px 20px;background:var(--accent,#c0392b);color:#fff;border-radius:999px;text-decoration:none;font-weight:700;font-size:.88rem">↓ Download campaign image</a>
+        <span style="font-size:.8rem;opacity:.6">Use as post image on any platform · Niho Taniwha motif</span>
+      </div>
+
+      <!-- Hashtag bank -->
+      <div style="background:var(--bg-raised,#1a1a1a);border:1px solid var(--border,#ffffff22);border-radius:10px;padding:14px 18px">
+        <p style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted,#aaa);font-weight:700;margin:0 0 8px">Hashtag bank — copy as needed</p>
+        <p style="font-size:.82rem;line-height:1.8;margin:0;font-family:monospace;color:var(--fg-muted,#ccc)">#KiwiDialectic #MāoriDataSovereignty #TinoRangatiratanga #AIActivism #TeReoMāori #KaupapaMāori #TePāTūwatawata #IndigenousRights #Aotearoa #DataSovereignty #SovereignFutures #Niho Taniwha</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>
+        <a href="https://www.kiwidialectic.com" target="_blank" rel="noopener noreferrer">The Kiwi Dialectic</a>
+        &nbsp;·&nbsp; <a href="https://robertmccallnz.github.io/ai-warrior/" target="_blank" rel="noopener noreferrer">AI Warrior</a>
+        &nbsp;·&nbsp; <a href="https://robertmccallnz.github.io/ai-literacy-for-families/" target="_blank" rel="noopener noreferrer">AI Literacy for Families</a>
+        &nbsp;·&nbsp; <a href="https://robertmccallnz.github.io/kiwidialecticcalendar-/badges/" target="_blank" rel="noopener noreferrer">Calendar &amp; Badges</a>
+        &nbsp;·&nbsp; Dunedin, Aotearoa New Zealand
+        &nbsp;·&nbsp; <a href="https://github.com/robertmccallnz/kiwi-dialectic-te-pa-minisite" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script>
+    const btn=document.getElementById('themeToggle'),html=document.documentElement;
+    const saved=localStorage.getItem('kd-theme')||'light';
+    html.setAttribute('data-theme',saved);
+    btn.textContent=saved==='dark'?'Light':'Dark';
+    btn.addEventListener('click',()=>{
+      const cur=html.getAttribute('data-theme'),next=cur==='dark'?'light':'dark';
+      html.setAttribute('data-theme',next);
+      localStorage.setItem('kd-theme',next);
+      btn.textContent=next==='dark'?'Light':'Dark';
+    });
+  </script>
+</body>
+</html>

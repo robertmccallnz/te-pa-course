@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 5: Hoahoa tika — The Kiwi Dialectic</title>
+  <meta name="description" content="Designing ethical systems — what does a decolonised AI architecture look like? Te Pā Tūwatawata course, The Kiwi Dialectic." />
+  <meta property="og:title" content="Module 5: Hoahoa tika" />
+  <meta property="og:description" content="Designing ethical systems — what does a decolonised AI architecture look like?" />
+  <meta property="og:image" content="https://te-pa.org/assets/social/kiwi-dialectic-x-card.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/kiwi-dialectic.css" />
+  <link rel="stylesheet" href="../assets/css/hotere-patch.css" />
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#c0392b">
+  <link rel="canonical" href="https://te-pa.org/modules/module-5.html"/>
+</head>
+<body>
+  <span class="motif-stripe" role="presentation" aria-hidden="true"></span>
+  <div class="shell--narrow" style="padding-top:0">
+    <nav class="site-nav">
+      <a class="nav-brand" href="https://www.kiwidialectic.com" target="_blank" rel="noopener noreferrer">The Kiwi Dialectic</a>
+      <div class="nav-links">
+        <a href="../index.html">All Modules</a>
+        <a href="../index.html#sources">Sources</a>
+        <button class="theme-btn" id="themeToggle">Dark</button>
+      </div>
+    </nav>
+
+    <!-- Kōwhaiwhai band — whakapapa -->
+    <div class="motif-band" role="presentation" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 44" width="100%" height="44" preserveAspectRatio="xMidYMid slice">
+        <rect width="600" height="44" fill="#111"/>
+        <polygon points="0.0,0 25.0,0 12.5,16" fill="#c0392b"/>
+        <polygon points="25.0,0 50.0,0 37.5,16" fill="#c0392b"/>
+        <polygon points="50.0,0 75.0,0 62.5,16" fill="#c0392b"/>
+        <polygon points="75.0,0 100.0,0 87.5,16" fill="#c0392b"/>
+        <polygon points="100.0,0 125.0,0 112.5,16" fill="#c0392b"/>
+        <polygon points="125.0,0 150.0,0 137.5,16" fill="#c0392b"/>
+        <polygon points="150.0,0 175.0,0 162.5,16" fill="#c0392b"/>
+        <polygon points="175.0,0 200.0,0 187.5,16" fill="#c0392b"/>
+        <polygon points="200.0,0 225.0,0 212.5,16" fill="#c0392b"/>
+        <polygon points="225.0,0 250.0,0 237.5,16" fill="#c0392b"/>
+        <polygon points="250.0,0 275.0,0 262.5,16" fill="#c0392b"/>
+        <polygon points="275.0,0 300.0,0 287.5,16" fill="#c0392b"/>
+        <polygon points="300.0,0 325.0,0 312.5,16" fill="#c0392b"/>
+        <polygon points="325.0,0 350.0,0 337.5,16" fill="#c0392b"/>
+        <polygon points="350.0,0 375.0,0 362.5,16" fill="#c0392b"/>
+        <polygon points="375.0,0 400.0,0 387.5,16" fill="#c0392b"/>
+        <polygon points="400.0,0 425.0,0 412.5,16" fill="#c0392b"/>
+        <polygon points="425.0,0 450.0,0 437.5,16" fill="#c0392b"/>
+        <polygon points="450.0,0 475.0,0 462.5,16" fill="#c0392b"/>
+        <polygon points="475.0,0 500.0,0 487.5,16" fill="#c0392b"/>
+        <polygon points="500.0,0 525.0,0 512.5,16" fill="#c0392b"/>
+        <polygon points="525.0,0 550.0,0 537.5,16" fill="#c0392b"/>
+        <polygon points="550.0,0 575.0,0 562.5,16" fill="#c0392b"/>
+        <polygon points="575.0,0 600.0,0 587.5,16" fill="#c0392b"/>
+        <line x1="0" y1="22" x2="600" y2="22" stroke="#f0efe9" stroke-width=".5" stroke-opacity=".2"/>
+      </svg>
+    </div>
+
+    <p class="breadcrumb" style="margin-top:20px">
+      <a href="../index.html">Te Pā Tūwatawata</a>
+      <span class="breadcrumb-sep">/</span>
+      Module 5
+    </p>
+
+    <article>
+      <p class="module-tag">Module 5 of 6</p>
+      <h1>Hoahoa tika</h1>
+      <p class="subtitle">Designing ethical systems — what does a decolonised AI architecture look like?</p>
+
+      <!-- Module motif banner -->
+      <div style="display:flex;align-items:center;gap:18px;background:var(--bg-raised);border-radius:14px;padding:18px 20px;margin:0 0 36px;border:1px solid var(--border)">
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:64px;height:64px;flex-shrink:0">
+        <rect width="80" height="80" fill="#111" rx="6"/>
+        <path d="M0,20 A20,20 0 0,1 40,20" fill="#c0392b" fill-opacity=".85"/>
+        <path d="M40,20 A20,20 0 0,1 80,20" fill="#c0392b" fill-opacity=".85"/>
+        <path d="M-20,40 A20,20 0 0,1 20,40" fill="#c0392b" fill-opacity=".7"/>
+        <path d="M20,40 A20,20 0 0,1 60,40" fill="#c0392b" fill-opacity=".7"/>
+        <path d="M60,40 A20,20 0 0,1 100,40" fill="#c0392b" fill-opacity=".7"/>
+        <path d="M0,60 A20,20 0 0,1 40,60" fill="#c0392b" fill-opacity=".85"/>
+        <path d="M40,60 A20,20 0 0,1 80,60" fill="#c0392b" fill-opacity=".85"/>
+        <path d="M-20,80 A20,20 0 0,1 20,80" fill="#c0392b" fill-opacity=".7"/>
+        <path d="M20,80 A20,20 0 0,1 60,80" fill="#c0392b" fill-opacity=".7"/>
+      </svg>
+        <div>
+          <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:4px">Tohu o tēnei akoranga — Module symbol</div>
+          <strong style="font-family:var(--font-serif)">Unaunahi</strong>
+          <p style="font-size:.88rem;color:var(--fg-muted);margin:4px 0 0">fish scales — abundance, interconnection, ethical design in layers</p>
+        </div>
+      </div>
+
+      <!-- Symbol meaning note -->
+      <p style="font-size:.92rem;color:var(--fg-muted);border-left:3px solid var(--accent);padding:10px 16px;background:var(--bg-raised);border-radius:0 10px 10px 0;margin-bottom:36px">This module carries <strong>unaunahi</strong> — fish scales, representing abundance and connection to the moana. Ethical design, like unaunahi, works in layers: each element interlocking with the next, no part working alone. Every layer of a system carries responsibility for the whole.</p>
+
+      <h2>He kupu whakataki — Introduction</h2>
+      <p>The previous modules have diagnosed the problem. This one turns to practice: what would it actually mean to design AI systems in accordance with tikanga Māori and Indigenous data sovereignty principles? What are the design requirements, and what would the architecture look like?</p>
+      <p>Hoahoa tika — ethical design — is not a checklist. It is a practice of putting values into structure: of building systems whose behaviour reflects the relationships and obligations they are meant to serve.</p>
+
+      <div class="pull-quote">"You cannot fix a colonial system by patching it. Sometimes you have to build something new from the ground up."</div>
+      <h2>Design principles for Māori-centred AI</h2>
+      <ul>
+        <li><strong>Consent architecture</strong> — data should not be collected, stored, or used without clear, ongoing, and revocable consent from the communities it came from. Consent must be collective as well as individual.</li>
+        <li><strong>Tapu-aware access controls</strong> — systems must distinguish between different kinds of knowledge with different access requirements. Not all Māori data is the same: some is publicly shareable, some restricted, some sacred.</li>
+        <li><strong>Benefit-sharing by design</strong> — if AI systems generate commercial value from Māori data or knowledge, that value must flow back to Māori communities by design, not by exception.</li>
+        <li><strong>Accountability to community, not just regulators</strong> — audit mechanisms must be accessible to iwi and hapū, not only to government agencies and corporate compliance teams.</li>
+        <li><strong>Te reo Māori as a first-class language</strong> — AI systems operating in Aotearoa must treat te reo Māori as a primary language with appropriate cultural context, not as a low-resource curiosity.</li>
+      </ul>
+      <h2>Case study: a hypothetical Māori health AI</h2>
+      <p>Consider a health AI designed to assist with Māori health outcomes. What would hoahoa tika require?</p>
+      <ul>
+        <li>Training data collected under iwi data sovereignty agreements, with ownership retained by the contributing communities.</li>
+        <li>The model auditable by Māori health researchers, not only by the company that built it.</li>
+        <li>Outputs tested against Māori health values, not only biomedical accuracy metrics.</li>
+        <li>Revenue including a benefit-sharing agreement with iwi data partners.</li>
+        <li>A tikanga Māori ethics committee — not just a standard IRB — with oversight of the system's development and deployment.</li>
+      </ul>
+      <div class="pull-quote">"Decolonising AI does not mean removing technology from Māori communities. It means ensuring technology serves those communities rather than extracting from them."</div>
+      <h2>The limits of "ethical AI" discourse</h2>
+      <p>Much of what passes for "ethical AI" in mainstream tech discourse is cosmetic. Bias audits, diversity statements, and advisory boards do not change the fundamental ownership structure of AI systems. Hoahoa tika is not satisfied by ethics washing — it requires structural change in who owns, governs, and benefits from AI.</p>
+      <h2>Key concepts</h2>
+      <ul class="concept-list">
+        <li><span class="concept-term">Hoahoa tika</span> Ethical design; designing systems that embody tikanga values</li>
+        <li><span class="concept-term">Consent architecture</span> Building meaningful, revocable, collective consent into data systems by design</li>
+        <li><span class="concept-term">Ethics washing</span> Superficial ethics frameworks used to legitimise extractive systems</li>
+        <li><span class="concept-term">Benefit-sharing</span> Mechanisms ensuring value generated from community data flows back to the community</li>
+      </ul>
+
+      <!-- Niho taniwha separator before questions -->
+      <div role="presentation" aria-hidden="true" style="margin:32px 0 0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 16" width="100%" height="16" preserveAspectRatio="xMidYMid slice">
+          <rect width="600" height="16" fill="var(--mangu,#111)"/>
+          <polygon points="0.0,0 25.0,0 12.5,16" fill="#c0392b"/>
+        <polygon points="25.0,0 50.0,0 37.5,16" fill="#c0392b"/>
+        <polygon points="50.0,0 75.0,0 62.5,16" fill="#c0392b"/>
+        <polygon points="75.0,0 100.0,0 87.5,16" fill="#c0392b"/>
+        <polygon points="100.0,0 125.0,0 112.5,16" fill="#c0392b"/>
+        <polygon points="125.0,0 150.0,0 137.5,16" fill="#c0392b"/>
+        <polygon points="150.0,0 175.0,0 162.5,16" fill="#c0392b"/>
+        <polygon points="175.0,0 200.0,0 187.5,16" fill="#c0392b"/>
+        <polygon points="200.0,0 225.0,0 212.5,16" fill="#c0392b"/>
+        <polygon points="225.0,0 250.0,0 237.5,16" fill="#c0392b"/>
+        <polygon points="250.0,0 275.0,0 262.5,16" fill="#c0392b"/>
+        <polygon points="275.0,0 300.0,0 287.5,16" fill="#c0392b"/>
+        <polygon points="300.0,0 325.0,0 312.5,16" fill="#c0392b"/>
+        <polygon points="325.0,0 350.0,0 337.5,16" fill="#c0392b"/>
+        <polygon points="350.0,0 375.0,0 362.5,16" fill="#c0392b"/>
+        <polygon points="375.0,0 400.0,0 387.5,16" fill="#c0392b"/>
+        <polygon points="400.0,0 425.0,0 412.5,16" fill="#c0392b"/>
+        <polygon points="425.0,0 450.0,0 437.5,16" fill="#c0392b"/>
+        <polygon points="450.0,0 475.0,0 462.5,16" fill="#c0392b"/>
+        <polygon points="475.0,0 500.0,0 487.5,16" fill="#c0392b"/>
+        <polygon points="500.0,0 525.0,0 512.5,16" fill="#c0392b"/>
+        <polygon points="525.0,0 550.0,0 537.5,16" fill="#c0392b"/>
+        <polygon points="550.0,0 575.0,0 562.5,16" fill="#c0392b"/>
+        <polygon points="575.0,0 600.0,0 587.5,16" fill="#c0392b"/>
+        </svg>
+      </div>
+
+      <div class="question-box">
+        <h3>Pātai — Discussion questions</h3>
+        <ol>
+          <li>Design a data consent protocol for an AI system that uses oral histories from kaumātua. What would genuine informed consent look like?</li>
+          <li>How does the concept of tapu challenge the design assumptions of standard cloud computing architecture?</li>
+          <li>What is the difference between 'ethical AI' as practised by major tech companies and hoahoa tika as described in this module?</li>
+          <li>Who should have veto power over the deployment of an AI system that affects a Māori community? Justify your answer.</li>
+        </ol>
+      </div>
+    </article>
+
+    <div class="nav-between">
+      <a href="module-4.html">← Module 4</a>
+      <a href="module-6.html">Module 6 →</a>
+    </div>
+
+    <!-- ── SOCIAL FIREPOWER + LEARNING ──────────────────────────────────── -->
+    <section style="margin-top:2.5rem;padding-top:2rem;border-top:2px solid var(--accent,#c0392b)">
+      <div class="section-head">
+        <p class="section-tag">Tiaki · Toha — Share &amp; learn</p>
+        <h2>Designing Ethical Systems — Social toolkit</h2>
+      </div>
+
+      <!-- Activity -->
+      <div style="background:var(--bg-raised,#1a1a1a);border:1px solid var(--border,#ffffff22);border-left:4px solid var(--accent,#c0392b);border-radius:0 12px 12px 0;padding:20px 24px;margin:1.5rem 0">
+        <p style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent,#c0392b);font-weight:700;margin:0 0 6px">Activity — Ethics by design</p>
+        <p style="font-size:.9rem;line-height:1.65;margin:0">Redesign one feature of a social media platform using unaunahi logic — interlocking layers, collective protection, no single point of failure. Draw it. What disappears? What becomes possible?</p>
+      </div>
+
+      <!-- Tweet/X copy -->
+      <p class="section-tag" style="margin-bottom:.6rem">X / Twitter — copy and post</p>
+      <div style="background:var(--bg-code,#111);border-radius:8px;padding:14px 18px;margin-bottom:1.5rem">
+        <p style="font-family:monospace;font-size:.83rem;line-height:1.7;white-space:pre-wrap;color:#f4f0e8;margin:0">What if social media was built like unaunahi — fish scales, each one protecting the next, collective before individual? Module 5 of this free course asks: what would ethical design actually look like? 👉 [link] #EthicalDesign #Unaunahi #KiwiDialectic</p>
+      </div>
+
+      <!-- Instagram copy -->
+      <p class="section-tag" style="margin-bottom:.6rem">Instagram — copy and post</p>
+      <div style="background:var(--bg-code,#111);border-radius:8px;padding:14px 18px;margin-bottom:1.5rem">
+        <p style="font-family:monospace;font-size:.83rem;line-height:1.7;white-space:pre-wrap;color:#f4f0e8;margin:0">Unaunahi — fish scales interlocking, each one protecting the next. What if AI was designed this way — collective protection instead of individual extraction? Free course. Link in bio. #KiwiDialectic #EthicalDesign #Unaunahi</p>
+      </div>
+
+      <!-- Thread -->
+      <p class="section-tag" style="margin-bottom:.6rem">X thread — copy, customise, fire</p>
+      <div style="background:var(--bg-code,#111);border-radius:8px;padding:14px 18px;margin-bottom:1.5rem">
+        <p style="font-family:monospace;font-size:.83rem;line-height:1.8;white-space:pre-wrap;color:#f4f0e8;margin:0">1/ What does ethical AI design actually look like? Unaunahi has the answer. 🧵
+
+2/ Unaunahi is the fish-scale carving motif of Māori art. It represents kotahitanga — collective strength. Each scale is small alone. Interlocked, they form armour. No single point of failure.
+
+3/ Current AI design is the opposite: single company, single dataset, single point of profit. The failure is inevitable — the harm is concentrated on those with the least power.
+
+4/ Ethical design by Māori principles: collective ownership, tikanga-governed access, distributed infrastructure, community benefit before shareholder value. This is what Te Pā Tūwatawata already does.
+
+5/ Hoahoa tika — design with care. It's not a nice-to-have. It's the architecture of a liveable digital future. Free course 👉 [link] #EthicalAI #Unaunahi #MāoriDesign</p>
+      </div>
+
+      <!-- Download image -->
+      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+        <a href="../social-kit/unaunahi/una-x-design.svg" download style="display:inline-block;padding:10px 20px;background:var(--accent,#c0392b);color:#fff;border-radius:999px;text-decoration:none;font-weight:700;font-size:.88rem">↓ Download campaign image</a>
+        <span style="font-size:.8rem;opacity:.6">Use as post image on any platform · Unaunahi motif</span>
+      </div>
+
+      <!-- Hashtag bank -->
+      <div style="background:var(--bg-raised,#1a1a1a);border:1px solid var(--border,#ffffff22);border-radius:10px;padding:14px 18px">
+        <p style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted,#aaa);font-weight:700;margin:0 0 8px">Hashtag bank — copy as needed</p>
+        <p style="font-size:.82rem;line-height:1.8;margin:0;font-family:monospace;color:var(--fg-muted,#ccc)">#KiwiDialectic #MāoriDataSovereignty #TinoRangatiratanga #AIActivism #TeReoMāori #KaupapaMāori #TePāTūwatawata #IndigenousRights #Aotearoa #DataSovereignty #SovereignFutures #Unaunahi</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>
+        <a href="https://www.kiwidialectic.com" target="_blank" rel="noopener noreferrer">The Kiwi Dialectic</a>
+        &nbsp;·&nbsp; <a href="https://robertmccallnz.github.io/ai-warrior/" target="_blank" rel="noopener noreferrer">AI Warrior</a>
+        &nbsp;·&nbsp; <a href="https://robertmccallnz.github.io/ai-literacy-for-families/" target="_blank" rel="noopener noreferrer">AI Literacy for Families</a>
+        &nbsp;·&nbsp; <a href="https://robertmccallnz.github.io/kiwidialecticcalendar-/badges/" target="_blank" rel="noopener noreferrer">Calendar &amp; Badges</a>
+        &nbsp;·&nbsp; Dunedin, Aotearoa New Zealand
+        &nbsp;·&nbsp; <a href="https://github.com/robertmccallnz/kiwi-dialectic-te-pa-minisite" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </footer>
+  </div>
+  <script>
+    const btn=document.getElementById('themeToggle'),html=document.documentElement;
+    const saved=localStorage.getItem('kd-theme')||'light';
+    html.setAttribute('data-theme',saved);
+    btn.textContent=saved==='dark'?'Light':'Dark';
+    btn.addEventListener('click',()=>{
+      const cur=html.getAttribute('data-theme'),next=cur==='dark'?'light':'dark';
+      html.setAttribute('data-theme',next);
+      localStorage.setItem('kd-theme',next);
+      btn.textContent=next==='dark'?'Light':'Dark';
+    });
+  </script>
+</body>
+</html>
