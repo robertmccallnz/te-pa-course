@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Ecosystem Rhizome — Te Pā Tūwatawata</title>
+<meta name="description" content="A rhizomatic, measurable map of the Te Pā ecosystem — motifs as plateaus, Meadows leverage points, and live metrics."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/kiwi-dialectic.css"/>
+<link rel="stylesheet" href="../assets/css/hotere-patch.css"/>
+<link rel="stylesheet" href="../assets/community.css"/>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+.motif-colour-stripe{background:#c0392b;height:6px;width:100%;display:block;margin-bottom:2rem;border-radius:3px}
+.eco-intro{max-width:70ch;margin:1rem 0 2rem;line-height:1.7}
+#ecoMap{background:var(--bg-raised);border:1px solid var(--border);border-radius:12px;padding:1rem;overflow:auto}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.8rem;margin:1rem 0 2rem}
+.info-card{background:var(--bg-raised);border:1px solid var(--border);border-left:4px solid #c0392b;border-radius:0 12px 12px 0;padding:16px 18px}
+.info-card h4{margin:0 0 .3rem;font-size:1rem}
+.info-card .lev{font-family:monospace;font-size:.8rem;color:#c0392b}
+.bar{height:6px;border-radius:3px;background:#2ecc71;margin-top:.5rem}
+.tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#c0392b}
+.legend{font-family:monospace;font-size:.82rem;line-height:1.9;background:var(--bg-raised);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:1rem 0}
+.updated{font-size:.8rem;opacity:.6}
+</style>
+</head>
+<body>
+<span class="motif-colour-stripe"></span>
+<nav style="display:flex;gap:1.2rem;flex-wrap:wrap;padding:0 0 1rem;font-size:.9rem">
+<a href="../index.html">Home</a>
+<a href="../index.html#modules">Modules</a>
+<a href="index.html">All Motifs</a>
+<a href="https://robertmccallnz.github.io/systems-observatory/">Systems Observatory</a>
+<a href="#" id="tt">Dark</a>
+</nav>
+<p class="tag">Rhizome — pūnaha hono</p>
+<h1>Te Pā Ecosystem Rhizome</h1>
+<p class="eco-intro">A rhizomatic map after Deleuze &amp; Guattari — no single root. Any node can connect to any other (connection &amp; heterogeneity); the six motifs and six thinkers are plateaus you may enter from any point. Each node carries a Donella Meadows leverage point and a live health metric read from <code>assets/data/ecosystem-metrics.json</code>. Edit that file to re-render the map and measure change over time.</p>
+<div id="ecoMap"><pre class="mermaid" id="mm">flowchart LR
+%% placeholder — replaced at runtime</pre></div>
+<p class="updated" id="upd"></p>
+<h2>Nodes &amp; leverage</h2>
+<div class="card-grid" id="cards"></div>
+<h2>Edge whakapapa</h2>
+<div class="legend">korero — narrative / knowledge exchange
+raraunga — data, AI, rights
+kaihaukai — reciprocal exchange
+mahika-kai — practical sustenance / capability
+takarangi — recursive learning spiral
+ngaru — movement across networks</div>
+<footer style="margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.85rem;opacity:.8">
+<a href="https://robertmccallnz.github.io/six-thinkers/">The Kiwi Dialectic</a> · Ōtepoti / Dunedin · CC BY-SA 4.0
+</footer>
+<script>
+const h=document.documentElement,b=document.getElementById('tt');
+const s=localStorage.getItem('kd-theme')||'light';h.setAttribute('data-theme',s);b.textContent=s==='dark'?'Light':'Dark';
+b.addEventListener('click',e=>{e.preventDefault();const c=h.getAttribute('data-theme'),n=c==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('kd-theme',n);b.textContent=n==='dark'?'Light':'Dark';});
+const EDGE={korero:'korero',raraunga:'raraunga',kaihaukai:'kaihaukai','mahika-kai':'mahika kai',takarangi:'takarangi',ngaru:'ngaru'};
+fetch('../assets/data/ecosystem-metrics.json').then(r=>r.json()).then(d=>{
+document.getElementById('upd').textContent='Metrics updated '+d.updated+' · source: systems-observatory';
+let g='flowchart LR\n';
+for(const k in d.nodes){const n=d.nodes[k];g+='  '+k+'(["'+n.label+'<br/>L'+n.leverage+'"])\n';}
+d.edges.forEach(e=>{g+='  '+e.from+' -- '+(EDGE[e.type]||e.type)+' --> '+e.to+'\n';});
+const mm=document.getElementById('mm');mm.textContent=g;mm.removeAttribute('data-processed');
+mermaid.initialize({startOnLoad:false,theme:'base'});mermaid.run({nodes:[mm]});
+const cards=document.getElementById('cards');
+for(const k in d.nodes){const n=d.nodes[k];const div=document.createElement('div');div.className='info-card';
+div.innerHTML='<span class="lev">Leverage '+n.leverage+'/12 · '+n.trend+'</span><h4><a href="'+k+'.html">'+n.label+'</a></h4><div>'+n.kaupapa+'</div><div class="bar" style="width:'+Math.round(n.health*100)+'%"></div>';
+cards.appendChild(div);}
+}).catch(e=>{document.getElementById('ecoMap').innerHTML='<p>Metrics file not found yet.</p>';});
+</script>
+</body>
+</html>
