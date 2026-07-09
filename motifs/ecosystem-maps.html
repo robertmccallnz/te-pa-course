@@ -17,47 +17,47 @@ code { background: #f0ece0; padding: 0 .3rem; border-radius: 3px; }
 </head>
 <body>
 <h1>Te Pā Ecosystem Maps</h1>
-<p>System-design maps for Te Pā Tūwatawata, woven through the Six Thinkers meta-layer. Edge labels name the flows between nodes: <code>kōrero</code> (dialogue), <code>raraunga</code> (data / sovereignty), <code>kaihaukai</code> (reciprocal exchange), <code>mahika kai</code> (provisioning), <code>takarangi</code> (spiral growth), <code>ngaru</code> (wave / propagation).</p>
-<h2>Map 1 — Te Pā Ōtepoti</h2>
-<div class="legend"><strong>Motif legend:</strong> takarangi = spiral capability growth · ngaru = wave propagation of practice · mangōpare = resilience / strength · kaihaukai = reciprocal exchange.</div>
+<p>System-design maps for Te Pā Tūwatawata, woven through the Six Thinkers meta-layer. Edge labels name the flows: kōrero (dialogue), raraunga (data / sovereignty), kaihaukai (reciprocal exchange), mahika kai (provisioning), takarangi (spiral growth), ngaru (wave / propagation).</p>
+<h2>Te Pā Ōtepoti</h2>
+<div class="legend"><strong>Motif legend:</strong> takarangi = spiral capability growth · ngaru = wave propagation · mangōpare = resilience · kaihaukai = reciprocal exchange. Iwi / Māori org nodes are clickable and link to official sites (reference, not endorsement).</div>
 <div class="map">
 <pre class="mermaid">
 flowchart TD
 WK[Te Whare Karioi]
-KT[Kāi Tahu / Ngāi Tahu]
-OR[Te Rūnanga o Ōtākou]
-PK[Kāti Huirapa Rūnaka ki Puketeraki]
+KT[Kai Tahu / Ngai Tahu]
+OR[Te Runanga o Otakou]
+PK[Kati Huirapa Runaka ki Puketeraki]
 LA[Literacy Aotearoa]
-TP[Te Pā Ōtepoti Node]
+TP[Te Pa Otepoti Node]
 KT -->|raraunga| TP
 OR -->|kaihaukai| TP
 PK -->|mahika kai| TP
-WK -->|kōrero| TP
+WK -->|korero| TP
 LA -->|takarangi| TP
 TP -->|ngaru| WK
 click KT "https://ngaitahu.iwi.nz" _blank
 click OR "https://www.otakourunaka.co.nz" _blank
-click PK "https://puketeraki.nz" _blank
+click PK "https://www.puketeraki.nz" _blank
 click LA "https://www.literacy.org.nz" _blank
 click WK "https://nz-code.nz/wharekarioi" _blank
 </pre>
 </div>
-<h2>Map 2 — Te Pā Aotearoa</h2>
-<div class="legend"><strong>Motif legend:</strong> Six Thinkers form the meta-layer weaving regional nodes; edges carry kōrero, raraunga and kaihaukai across the motu.</div>
+<h2>Te Pā Aotearoa</h2>
+<div class="legend"><strong>Motif legend:</strong> The Six Thinkers form the meta-layer that weaves regional nodes; edges carry kōrero, raraunga and kaihaukai across the motu.</div>
 <div class="map">
 <pre class="mermaid">
 flowchart TD
-ST[[Six Thinkers meta-layer]]
-OTE[Te Pā Ōtepoti]
-TMK[Te Pā Te Tai Tokerau]
-WLG[Te Pā Te Whanganui-a-Tara]
-WKO[Te Pā Waikato]
-NAT[Te Pā Aotearoa Hub]
+ST[Six Thinkers meta-layer]
+NAT[Te Pa Aotearoa Hub]
+OTE[Te Pa Otepoti]
+TMK[Te Pa Te Tai Tokerau]
+WLG[Te Pa Te Whanganui-a-Tara]
+WKO[Te Pa Waikato]
 ST -->|takarangi| NAT
-NAT -->|kōrero| OTE
-NAT -->|kōrero| TMK
-NAT -->|kōrero| WLG
-NAT -->|kōrero| WKO
+NAT -->|korero| OTE
+NAT -->|korero| TMK
+NAT -->|korero| WLG
+NAT -->|korero| WKO
 OTE -->|raraunga| NAT
 TMK -->|kaihaukai| NAT
 WLG -->|ngaru| NAT
@@ -67,9 +67,9 @@ WKO -->|mahika kai| NAT
 <h2>Ōtepoti references</h2>
 <div class="refs">
 <ul>
-<li>Kāi Tahu / Ngāi Tahu — <a href="https://ngaitahu.iwi.nz">ngaitahu.iwi.nz</a></li>
-<li>Te Rūnanga o Ōtākou — <a href="https://www.otakourunaka.co.nz">otakourunaka.co.nz</a></li>
-<li>Kāti Huirapa Rūnaka ki Puketeraki — <a href="https://puketeraki.nz">puketeraki.nz</a></li>
+<li>Kai Tahu / Ngai Tahu — <a href="https://ngaitahu.iwi.nz">ngaitahu.iwi.nz</a></li>
+<li>Te Runanga o Otakou — <a href="https://www.otakourunaka.co.nz">otakourunaka.co.nz</a></li>
+<li>Kati Huirapa Runaka ki Puketeraki — <a href="https://www.puketeraki.nz">puketeraki.nz</a></li>
 <li>Literacy Aotearoa — <a href="https://www.literacy.org.nz">literacy.org.nz</a></li>
 <li>Te Whare Karioi — <a href="https://nz-code.nz/wharekarioi">nz-code.nz/wharekarioi</a></li>
 </ul>
