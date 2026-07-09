@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Ecosystem Maps — Te Pā Tūwatawata</title>
-<meta name="description" content="Te Pā ecosystem system-design maps — Ōtepoti and Aotearoa."/>
+<meta name="description" content="Te Pā ecosystem system-design maps — Ōtepoti and Aotearoa — with linked iwi and Māori organisations."/>
 //fonts.googleapis.com">
 //fonts.gstatic.com" crossorigin>
 //fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,8 +15,10 @@
 <style>
 .motif-colour-stripe{background:#c0392b;height:6px;width:100%;display:block;margin-bottom:2rem;border-radius:3px}
 .eco-intro{max-width:70ch;margin:1rem 0 2rem;line-height:1.7}
-.map-wrap{background:var(--bg-raised);border:1px solid var(--border);border-radius:12px;padding:1rem;overflow:auto;margin:1rem 0 2.5rem}
+.map-wrap{background:var(--bg-raised);border:1px solid var(--border);border-radius:12px;padding:1rem;overflow:auto;margin:1rem 0 1rem}
 .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#c0392b}
+.refs{font-size:.85rem;line-height:1.8;background:var(--bg-raised);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:0 0 2.5rem}
+.refs h3{margin:0 0 .5rem;font-size:.95rem}
 </style>
 </head>
 <body>
@@ -30,7 +32,7 @@
 </nav>
 <p class="tag">Pūnaha hoahoa — system design</p>
 <h1>Te Pā Ecosystem Maps</h1>
-<p class="eco-intro">Two system-design maps of the Te Pā ecosystem. The first is grounded in Ōtepoti; the second scales the same logic across Aotearoa.</p>
+<p class="eco-intro">Two system-design maps of the Te Pā ecosystem. The first is grounded in Ōtepoti; the second scales the same logic across Aotearoa. Iwi and Māori organisation nodes are clickable and link to official sites. These links denote reference and relationship, not formal endorsement or partnership.</p>
 
 <h2>Te Pā Ōtepoti</h2>
 <div class="map-wrap">
@@ -41,6 +43,8 @@ flowchart TB
         L1["Whānau / tamariki / rangatahi"]
         L2["Kaiako / kaitautoko"]
         L3["Kāi Tahu / mana whenua"]
+        L3a["Te Rūnanga o Ōtākou"]
+        L3b["Kāti Huirapa Rūnaka ki Puketeraki"]
         L4["Tikanga, kawa, mana motuhake"]
     end
     subgraph O["Ngā hoa mahi o Ōtepoti"]
@@ -82,6 +86,8 @@ flowchart TB
     O --> T
     T --> P
     P --> L1
+    L3 --> L3a
+    L3 --> L3b
     O1 -- korero --> T1
     O5 -- korero --> T1
     O4 -- takaro --> T2
@@ -107,18 +113,33 @@ flowchart TB
     S4 -.-> T3
     S5 -.-> T5
     S6 -.-> T6
+    click L3 "https://ngaitahu.iwi.nz" _blank
+    click L3a "https://www.otakourunaka.co.nz" _blank
+    click L3b "https://www.puketeraki.nz" _blank
+    click O2 "https://www.literacy.org.nz" _blank
+    click O4 "https://www.nz-code.nz/wharekarioi" _blank
     classDef takarangi fill:#fff2,stroke:#666,stroke-dasharray:3 3;
     classDef ngaru fill:#def2ff,stroke:#0077b6;
     classDef mahikaKai fill:#fef4e6,stroke:#c88719;
     classDef kaihaukai fill:#ffeef2,stroke:#b32653;
     classDef mangopare fill:#e9f5ec,stroke:#2b7a3b;
+    classDef iwi fill:#f3e8ff,stroke:#7c3aed,stroke-width:2px;
     class A takarangi;
     class T1,T2,T3,T4,T5,T6 takarangi;
     class T3,P4,P6 mangopare;
     class T4,O2,O1 mahikaKai;
     class T5,P5,O3 kaihaukai;
     class P1,P2,P3,P5,P6 ngaru;
+    class L3,L3a,L3b iwi;
 </pre>
+</div>
+<div class="refs">
+<h3>Ōtepoti references</h3>
+Kāi Tahu / Ngāi Tahu — <a href="https://ngaitahu.iwi.nz">ngaitahu.iwi.nz</a><br/>
+Te Rūnanga o Ōtākou — <a href="https://www.otakourunaka.co.nz">otakourunaka.co.nz</a><br/>
+Kāti Huirapa Rūnaka ki Puketeraki — <a href="https://www.puketeraki.nz">puketeraki.nz</a><br/>
+Literacy Aotearoa — <a href="https://www.literacy.org.nz">literacy.org.nz</a><br/>
+Te Whare Karioi — <a href="https://www.nz-code.nz/wharekarioi">nz-code.nz/wharekarioi</a>
 </div>
 
 <h2>Te Pā Aotearoa</h2>
@@ -134,11 +155,9 @@ flowchart TB
     end
     subgraph N["Ngā rautaki ā-motu"]
         N1["Connected Ako"]
-        N2["Rautaki matihiko mō Aotearoa"]
-        N3["Māori digital inclusion"]
+        N2["Digital inclusion — Māori"]
         N4["Apple in Kura"]
-        N5["Māori in DigiTech Futures"]
-        N6["Rautaki reo Māori"]
+        N6["Te Taura Whiri i te reo Māori"]
     end
     subgraph T["Ngā ara ako"]
         T1["Pā Kōrero ā-motu"]
@@ -173,13 +192,11 @@ flowchart TB
     T --> P
     P --> L1
     N6 -- korero --> T1
-    N5 -- takaro --> T2
-    N3 -- raraunga --> T3
+    N4 -- takaro --> T2
     N2 -- raraunga --> T3
     N1 -- mahika-kai --> T4
     N4 -- pukenga --> T4
     N2 -- kaupapa --> T5
-    N5 -- kaupapa --> T5
     L2 -- kaihaukai --> T6
     T1 --> P3
     T2 --> P1
@@ -196,24 +213,4 @@ flowchart TB
     S4 -.-> T3
     S5 -.-> T5
     S6 -.-> T6
-    classDef takarangi fill:#fff2,stroke:#666,stroke-dasharray:3 3;
-    classDef ngaru fill:#def2ff,stroke:#0077b6;
-    classDef mahikaKai fill:#fef4e6,stroke:#c88719;
-    classDef kaihaukai fill:#ffeef2,stroke:#b32653;
-    classDef mangopare fill:#e9f5ec,stroke:#2b7a3b;
-    class A takarangi;
-    class T1,T2,T3,T4,T5,T6 takarangi;
-    class T3,P4,P6 mangopare;
-    class T4,N1,N4 mahikaKai;
-    class T5,P5,N2 kaihaukai;
-    class P1,P2,P3,P5,P6 ngaru;
-</pre>
-</div>
-
-<footer style="margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.85rem;opacity:.8">
-<a href="https://robertmccallnz.github.io/six-thinkers/">The Kiwi Dialectic</a> · Ōtepoti / Dunedin · CC BY-SA 4.0
-</footer>
-<script>
-const h=document.documentElement,b=document.getElementById('tt');
-const s=localStorage.getItem('kd-theme')||'light';h.setAttribute('data-theme',s);b.textContent=s==='dark'?'Light':'Dark';
-b.addEventListener('click',e=>{e.preventDefault();const c=h.getAttribute('data-theme'),n=c==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem
+    click N1 "https://www.education.govt.
