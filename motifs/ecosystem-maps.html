@@ -1,216 +1,82 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ecosystem Maps — Te Pā Tūwatawata</title>
-<meta name="description" content="Te Pā ecosystem system-design maps — Ōtepoti and Aotearoa — with linked iwi and Māori organisations."/>
-//fonts.googleapis.com">
-//fonts.gstatic.com" crossorigin>
-//fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-/assets/css/kiwi-dialectic.css"/>
-/assets/css/hotere-patch.css"/>
-/assets/community.css"/>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<meta name="description" content="Te Pā ecosystem system-design maps: Ōtepoti and Aotearoa, woven through the Six Thinkers.">
 <style>
-.motif-colour-stripe{background:#c0392b;height:6px;width:100%;display:block;margin-bottom:2rem;border-radius:3px}
-.eco-intro{max-width:70ch;margin:1rem 0 2rem;line-height:1.7}
-.map-wrap{background:var(--bg-raised);border:1px solid var(--border);border-radius:12px;padding:1rem;overflow:auto;margin:1rem 0 1rem}
-.tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#c0392b}
-.refs{font-size:.85rem;line-height:1.8;background:var(--bg-raised);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:0 0 2.5rem}
-.refs h3{margin:0 0 .5rem;font-size:.95rem}
+body { font-family: Georgia, serif; max-width: 1100px; margin: 2rem auto; padding: 0 1rem; color: #2b2b2b; line-height: 1.6; }
+h1 { border-bottom: 3px solid #7a1f1f; padding-bottom: .3rem; }
+h2 { color: #7a1f1f; margin-top: 2.5rem; }
+.map { background: #fdfcf7; border: 1px solid #e5e0d0; border-radius: 8px; padding: 1rem; margin: 1rem 0; overflow-x: auto; }
+.legend { font-size: .95rem; background: #f7f4ea; border-left: 4px solid #7a1f1f; padding: .75rem 1rem; margin: 1rem 0; }
+.refs a { color: #7a1f1f; }
+code { background: #f0ece0; padding: 0 .3rem; border-radius: 3px; }
 </style>
 </head>
 <body>
-<span class="motif-colour-stripe"></span>
-<nav style="display:flex;gap:1.2rem;flex-wrap:wrap;padding:0 0 1rem;font-size:.9rem">
-<a href="../index.html">Home</a>
-<a href="index.html">All Motifs</a>
-<a href="ecosystem.html">Ecosystem Rhizome</a>
-<a href="https://robertmccallnz.github.io/systems-observatory/">Systems Observatory</a>
-<a href="#" id="tt">Dark</a>
-</nav>
-<p class="tag">Pūnaha hoahoa — system design</p>
 <h1>Te Pā Ecosystem Maps</h1>
-<p class="eco-intro">Two system-design maps of the Te Pā ecosystem. The first is grounded in Ōtepoti; the second scales the same logic across Aotearoa. Iwi and Māori organisation nodes are clickable and link to official sites. These links denote reference and relationship, not formal endorsement or partnership.</p>
-
-<h2>Te Pā Ōtepoti</h2>
-<div class="map-wrap">
+<p>System-design maps for Te Pā Tūwatawata, woven through the Six Thinkers meta-layer. Edge labels name the flows between nodes: <code>kōrero</code> (dialogue), <code>raraunga</code> (data / sovereignty), <code>kaihaukai</code> (reciprocal exchange), <code>mahika kai</code> (provisioning), <code>takarangi</code> (spiral growth), <code>ngaru</code> (wave / propagation).</p>
+<h2>Map 1 — Te Pā Ōtepoti</h2>
+<div class="legend"><strong>Motif legend:</strong> takarangi = spiral capability growth · ngaru = wave propagation of practice · mangōpare = resilience / strength · kaihaukai = reciprocal exchange.</div>
+<div class="map">
 <pre class="mermaid">
-flowchart TB
-    A["Te Pā Ōtepoti"]
-    subgraph L["Ngā tāngata me te kaupapa"]
-        L1["Whānau / tamariki / rangatahi"]
-        L2["Kaiako / kaitautoko"]
-        L3["Kāi Tahu / mana whenua"]
-        L3a["Te Rūnanga o Ōtākou"]
-        L3b["Kāti Huirapa Rūnaka ki Puketeraki"]
-        L4["Tikanga, kawa, mana motuhake"]
-    end
-    subgraph O["Ngā hoa mahi o Ōtepoti"]
-        O1["Te Kura Kaupapa Māori o Ōtepoti"]
-        O2["Literacy Aotearoa Ōtepoti"]
-        O3["Whakamāori tāone"]
-        O4["Te Whare Karioi"]
-        O5["Ōtākou narratives"]
-    end
-    subgraph T["Ngā ara ako"]
-        T1["Pā Kōrero"]
-        T2["Pā Tākaro"]
-        T3["Pā Raraunga"]
-        T4["Pā Matihiko"]
-        T5["Pā Kaupapa"]
-        T6["Pā Kaiako"]
-    end
-    subgraph P["Ngā tūāpapa"]
-        P1["GitHub / pae tūroa"]
-        P2["Te Pā wāhi ako"]
-        P3["Pāpāho oro / ataata"]
-        P4["Kapua / manaaki raraunga"]
-        P5["Pāpāho pāpori"]
-        P6["Arataki ā-tuimotu"]
-    end
-    subgraph S["Ngā anga Six-Thinkers"]
-        S1["Tātari"]
-        S2["Hononga"]
-        S3["Auaha"]
-        S4["Pūnaha"]
-        S5["Rautaki"]
-        S6["Ā Mua"]
-    end
-    A --> L
-    A --> O
-    A --> T
-    A --> P
-    L --> A
-    O --> T
-    T --> P
-    P --> L1
-    L3 --> L3a
-    L3 --> L3b
-    O1 -- korero --> T1
-    O5 -- korero --> T1
-    O4 -- takaro --> T2
-    O3 -- raraunga --> T3
-    O2 -- mahika-kai --> T4
-    O1 -- pukenga --> T4
-    O3 -- kaupapa --> T5
-    O4 -- kaupapa --> T5
-    L2 -- kaihaukai --> T6
-    T1 --> P2
-    T1 --> P3
-    T2 --> P1
-    T2 --> P5
-    T3 --> P4
-    T3 --> P6
-    T4 --> P2
-    T4 --> P6
-    T5 --> P5
-    T6 --> P2
-    S1 -.-> T3
-    S2 -.-> T4
-    S3 -.-> T2
-    S4 -.-> T3
-    S5 -.-> T5
-    S6 -.-> T6
-    click L3 "https://ngaitahu.iwi.nz" _blank
-    click L3a "https://www.otakourunaka.co.nz" _blank
-    click L3b "https://www.puketeraki.nz" _blank
-    click O2 "https://www.literacy.org.nz" _blank
-    click O4 "https://www.nz-code.nz/wharekarioi" _blank
-    classDef takarangi fill:#fff2,stroke:#666,stroke-dasharray:3 3;
-    classDef ngaru fill:#def2ff,stroke:#0077b6;
-    classDef mahikaKai fill:#fef4e6,stroke:#c88719;
-    classDef kaihaukai fill:#ffeef2,stroke:#b32653;
-    classDef mangopare fill:#e9f5ec,stroke:#2b7a3b;
-    classDef iwi fill:#f3e8ff,stroke:#7c3aed,stroke-width:2px;
-    class A takarangi;
-    class T1,T2,T3,T4,T5,T6 takarangi;
-    class T3,P4,P6 mangopare;
-    class T4,O2,O1 mahikaKai;
-    class T5,P5,O3 kaihaukai;
-    class P1,P2,P3,P5,P6 ngaru;
-    class L3,L3a,L3b iwi;
+flowchart TD
+WK[Te Whare Karioi]
+KT[Kāi Tahu / Ngāi Tahu]
+OR[Te Rūnanga o Ōtākou]
+PK[Kāti Huirapa Rūnaka ki Puketeraki]
+LA[Literacy Aotearoa]
+TP[Te Pā Ōtepoti Node]
+KT -->|raraunga| TP
+OR -->|kaihaukai| TP
+PK -->|mahika kai| TP
+WK -->|kōrero| TP
+LA -->|takarangi| TP
+TP -->|ngaru| WK
+click KT "https://ngaitahu.iwi.nz" _blank
+click OR "https://www.otakourunaka.co.nz" _blank
+click PK "https://puketeraki.nz" _blank
+click LA "https://www.literacy.org.nz" _blank
+click WK "https://nz-code.nz/wharekarioi" _blank
 </pre>
 </div>
-<div class="refs">
-<h3>Ōtepoti references</h3>
-Kāi Tahu / Ngāi Tahu — <a href="https://ngaitahu.iwi.nz">ngaitahu.iwi.nz</a><br/>
-Te Rūnanga o Ōtākou — <a href="https://www.otakourunaka.co.nz">otakourunaka.co.nz</a><br/>
-Kāti Huirapa Rūnaka ki Puketeraki — <a href="https://www.puketeraki.nz">puketeraki.nz</a><br/>
-Literacy Aotearoa — <a href="https://www.literacy.org.nz">literacy.org.nz</a><br/>
-Te Whare Karioi — <a href="https://www.nz-code.nz/wharekarioi">nz-code.nz/wharekarioi</a>
-</div>
-
-<h2>Te Pā Aotearoa</h2>
-<div class="map-wrap">
+<h2>Map 2 — Te Pā Aotearoa</h2>
+<div class="legend"><strong>Motif legend:</strong> Six Thinkers form the meta-layer weaving regional nodes; edges carry kōrero, raraunga and kaihaukai across the motu.</div>
+<div class="map">
 <pre class="mermaid">
-flowchart TB
-    A["Te Pā Aotearoa"]
-    subgraph L["Ngā tāngata me te kaupapa"]
-        L1["Whānau / tamariki / rangatahi"]
-        L2["Kaiako / kaiārahi"]
-        L3["Iwi / hapū / mana whenua"]
-        L4["Tikanga, Te Tiriti, mana motuhake"]
-    end
-    subgraph N["Ngā rautaki ā-motu"]
-        N1["Connected Ako"]
-        N2["Digital inclusion — Māori"]
-        N4["Apple in Kura"]
-        N6["Te Taura Whiri i te reo Māori"]
-    end
-    subgraph T["Ngā ara ako"]
-        T1["Pā Kōrero ā-motu"]
-        T2["Pā Tākaro ā-motu"]
-        T3["Pā Raraunga ā-motu"]
-        T4["Pā Matihiko ā-motu"]
-        T5["Pā Kaupapa ā-motu"]
-        T6["Pā Kaiako ā-motu"]
-    end
-    subgraph P["Ngā tūāpapa"]
-        P1["GitHub / generator"]
-        P2["Te Pā pae ako"]
-        P3["Pāpāho oro / ataata"]
-        P4["Kapua / manaaki raraunga"]
-        P5["Pāpāho pāpori"]
-        P6["Arataki ā-tuimotu"]
-    end
-    subgraph S["Ngā anga Six-Thinkers"]
-        S1["Tātari"]
-        S2["Hononga"]
-        S3["Auaha"]
-        S4["Pūnaha"]
-        S5["Rautaki"]
-        S6["Ā Mua"]
-    end
-    A --> L
-    A --> N
-    A --> T
-    A --> P
-    L --> A
-    N --> T
-    T --> P
-    P --> L1
-    N6 -- korero --> T1
-    N4 -- takaro --> T2
-    N2 -- raraunga --> T3
-    N1 -- mahika-kai --> T4
-    N4 -- pukenga --> T4
-    N2 -- kaupapa --> T5
-    L2 -- kaihaukai --> T6
-    T1 --> P3
-    T2 --> P1
-    T2 --> P5
-    T3 --> P4
-    T3 --> P6
-    T4 --> P2
-    T4 --> P6
-    T5 --> P5
-    T6 --> P2
-    S1 -.-> T3
-    S2 -.-> L3
-    S3 -.-> T2
-    S4 -.-> T3
-    S5 -.-> T5
-    S6 -.-> T6
-    click N1 "https://www.education.govt.
+flowchart TD
+ST[[Six Thinkers meta-layer]]
+OTE[Te Pā Ōtepoti]
+TMK[Te Pā Te Tai Tokerau]
+WLG[Te Pā Te Whanganui-a-Tara]
+WKO[Te Pā Waikato]
+NAT[Te Pā Aotearoa Hub]
+ST -->|takarangi| NAT
+NAT -->|kōrero| OTE
+NAT -->|kōrero| TMK
+NAT -->|kōrero| WLG
+NAT -->|kōrero| WKO
+OTE -->|raraunga| NAT
+TMK -->|kaihaukai| NAT
+WLG -->|ngaru| NAT
+WKO -->|mahika kai| NAT
+</pre>
+</div>
+<h2>Ōtepoti references</h2>
+<div class="refs">
+<ul>
+<li>Kāi Tahu / Ngāi Tahu — <a href="https://ngaitahu.iwi.nz">ngaitahu.iwi.nz</a></li>
+<li>Te Rūnanga o Ōtākou — <a href="https://www.otakourunaka.co.nz">otakourunaka.co.nz</a></li>
+<li>Kāti Huirapa Rūnaka ki Puketeraki — <a href="https://puketeraki.nz">puketeraki.nz</a></li>
+<li>Literacy Aotearoa — <a href="https://www.literacy.org.nz">literacy.org.nz</a></li>
+<li>Te Whare Karioi — <a href="https://nz-code.nz/wharekarioi">nz-code.nz/wharekarioi</a></li>
+</ul>
+</div>
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10.9.6/dist/mermaid.esm.min.mjs";
+mermaid.initialize({ startOnLoad: true, securityLevel: "loose", theme: "neutral" });
+</script>
+</body>
+</html>
