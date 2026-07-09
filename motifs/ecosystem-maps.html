@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Ecosystem Maps — Te Pā Tūwatawata</title>
-<meta name="description" content="Te Pā ecosystem system-design maps — Ōtepoti and Aotearoa — with Māori naming, labelled edge whakapapa, and Six-Thinkers overlay."/>
+<meta name="description" content="Te Pā ecosystem system-design maps — Ōtepoti and Aotearoa."/>
 //fonts.googleapis.com">
 //fonts.gstatic.com" crossorigin>
 //fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,6 @@
 .eco-intro{max-width:70ch;margin:1rem 0 2rem;line-height:1.7}
 .map-wrap{background:var(--bg-raised);border:1px solid var(--border);border-radius:12px;padding:1rem;overflow:auto;margin:1rem 0 2.5rem}
 .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#c0392b}
-.legend{font-family:monospace;font-size:.82rem;line-height:1.9;background:var(--bg-raised);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:1rem 0}
 </style>
 </head>
 <body>
@@ -31,56 +30,50 @@
 </nav>
 <p class="tag">Pūnaha hoahoa — system design</p>
 <h1>Te Pā Ecosystem Maps</h1>
-<p class="eco-intro">Two system-design maps of the Te Pā ecosystem. The first is grounded in Ōtepoti; the second scales the same logic across Aotearoa. Nodes use Māori-first naming, edges are labelled with their whakapapa of exchange, and the Six-Thinkers lenses sit as a dotted overlay applied across every learning pathway.</p>
+<p class="eco-intro">Two system-design maps of the Te Pā ecosystem. The first is grounded in Ōtepoti; the second scales the same logic across Aotearoa.</p>
 
 <h2>Te Pā Ōtepoti</h2>
 <div class="map-wrap">
 <pre class="mermaid">
 flowchart TB
-    A["Te Pā Ōtepoti<br/>Pā matihiko mō Ōtepoti"]
-
+    A["Te Pā Ōtepoti"]
     subgraph L["Ngā tāngata me te kaupapa"]
         L1["Whānau / tamariki / rangatahi"]
         L2["Kaiako / kaitautoko"]
         L3["Kāi Tahu / mana whenua"]
         L4["Tikanga, kawa, mana motuhake"]
     end
-
     subgraph O["Ngā hoa mahi o Ōtepoti"]
         O1["Te Kura Kaupapa Māori o Ōtepoti"]
         O2["Literacy Aotearoa Ōtepoti"]
         O3["Whakamāori tāone"]
         O4["Te Whare Karioi"]
-        O5["Ōtākou / Otago Harbour narratives"]
+        O5["Ōtākou narratives"]
     end
-
-    subgraph T["Ngā ara ako o Te Pā Ōtepoti"]
-        T1["Pā Kōrero<br/>pūrākau, oro, tuhinga"]
-        T2["Pā Tākaro<br/>kēmu matihiko"]
-        T3["Pā Raraunga<br/>raraunga taketake, AI"]
-        T4["Pā Matihiko<br/>pūkenga, haumaru, māia"]
-        T5["Pā Kaupapa<br/>kaupapa tahi, whakarauora tāone"]
-        T6["Pā Kaiako<br/>whanaketanga kaiako"]
+    subgraph T["Ngā ara ako"]
+        T1["Pā Kōrero"]
+        T2["Pā Tākaro"]
+        T3["Pā Raraunga"]
+        T4["Pā Matihiko"]
+        T5["Pā Kaupapa"]
+        T6["Pā Kaiako"]
     end
-
-    subgraph P["Ngā tūāpapa me te tuku"]
+    subgraph P["Ngā tūāpapa"]
         P1["GitHub / pae tūroa"]
-        P2["Te Pā wāhi ako / papatohu"]
+        P2["Te Pā wāhi ako"]
         P3["Pāpāho oro / ataata"]
         P4["Kapua / manaaki raraunga"]
-        P5["Pāpāho pāpori / karere"]
+        P5["Pāpāho pāpori"]
         P6["Arataki ā-tuimotu"]
     end
-
     subgraph S["Ngā anga Six-Thinkers"]
-        S1["Āronga Tātari"]
-        S2["Āronga Hononga"]
-        S3["Āronga Auaha"]
-        S4["Āronga Pūnaha"]
-        S5["Āronga Rautaki"]
-        S6["Āronga Ā Mua"]
+        S1["Tātari"]
+        S2["Hononga"]
+        S3["Auaha"]
+        S4["Pūnaha"]
+        S5["Rautaki"]
+        S6["Ā Mua"]
     end
-
     A --> L
     A --> O
     A --> T
@@ -89,17 +82,15 @@ flowchart TB
     O --> T
     T --> P
     P --> L1
-
-    O1 -- kōrero kura / reo --> T1
-    O5 -- kōrero mō te wāhi --> T1
-    O4 -- tākaro / kēmu --> T2
-    O3 -- raraunga tāone --> T3
-    O2 -- mahika kai mātauraka --> T4
-    O1 -- pūkenga kura --> T4
-    O3 -- kaupapa tāone --> T5
-    O4 -- kaupapa toi --> T5
-    L2 -- kaihaukai mātauraka --> T6
-
+    O1 -- korero --> T1
+    O5 -- korero --> T1
+    O4 -- takaro --> T2
+    O3 -- raraunga --> T3
+    O2 -- mahika-kai --> T4
+    O1 -- pukenga --> T4
+    O3 -- kaupapa --> T5
+    O4 -- kaupapa --> T5
+    L2 -- kaihaukai --> T6
     T1 --> P2
     T1 --> P3
     T2 --> P1
@@ -110,19 +101,12 @@ flowchart TB
     T4 --> P6
     T5 --> P5
     T6 --> P2
-    T6 --> P3
-
     S1 -.-> T3
-    S1 -.-> T1
     S2 -.-> T4
-    S2 -.-> O5
     S3 -.-> T2
     S4 -.-> T3
-    S4 -.-> P4
     S5 -.-> T5
-    S6 -.-> T2
     S6 -.-> T6
-
     classDef takarangi fill:#fff2,stroke:#666,stroke-dasharray:3 3;
     classDef ngaru fill:#def2ff,stroke:#0077b6;
     classDef mahikaKai fill:#fef4e6,stroke:#c88719;
@@ -141,25 +125,22 @@ flowchart TB
 <div class="map-wrap">
 <pre class="mermaid">
 flowchart TB
-    A["Te Pā Aotearoa<br/>Pā matihiko mō ngā iwi o Aotearoa"]
-
+    A["Te Pā Aotearoa"]
     subgraph L["Ngā tāngata me te kaupapa"]
         L1["Whānau / tamariki / rangatahi"]
         L2["Kaiako / kaiārahi"]
         L3["Iwi / hapū / mana whenua"]
         L4["Tikanga, Te Tiriti, mana motuhake"]
     end
-
     subgraph N["Ngā rautaki ā-motu"]
         N1["Connected Ako"]
         N2["Rautaki matihiko mō Aotearoa"]
         N3["Māori digital inclusion"]
         N4["Apple in Kura"]
         N5["Māori in DigiTech Futures"]
-        N6["Rautaki matihiko mō te reo Māori"]
+        N6["Rautaki reo Māori"]
     end
-
-    subgraph T["Ngā ara ako o Te Pā Aotearoa"]
+    subgraph T["Ngā ara ako"]
         T1["Pā Kōrero ā-motu"]
         T2["Pā Tākaro ā-motu"]
         T3["Pā Raraunga ā-motu"]
@@ -167,25 +148,22 @@ flowchart TB
         T5["Pā Kaupapa ā-motu"]
         T6["Pā Kaiako ā-motu"]
     end
-
-    subgraph P["Ngā tūāpapa me te tuku"]
-        P1["GitHub / generator pae ako"]
-        P2["Te Pā pae ako / punaha tohu"]
-        P3["Pāpāho oro / ataata ā-motu"]
+    subgraph P["Ngā tūāpapa"]
+        P1["GitHub / generator"]
+        P2["Te Pā pae ako"]
+        P3["Pāpāho oro / ataata"]
         P4["Kapua / manaaki raraunga"]
-        P5["Pāpāho pāpori ā-motu"]
+        P5["Pāpāho pāpori"]
         P6["Arataki ā-tuimotu"]
     end
-
     subgraph S["Ngā anga Six-Thinkers"]
-        S1["Āronga Tātari"]
-        S2["Āronga Hononga"]
-        S3["Āronga Auaha"]
-        S4["Āronga Pūnaha"]
-        S5["Āronga Rautaki"]
-        S6["Āronga Ā Mua"]
+        S1["Tātari"]
+        S2["Hononga"]
+        S3["Auaha"]
+        S4["Pūnaha"]
+        S5["Rautaki"]
+        S6["Ā Mua"]
     end
-
     A --> L
     A --> N
     A --> T
@@ -194,20 +172,48 @@ flowchart TB
     N --> T
     T --> P
     P --> L1
-
-    N6 -- kōrero reo / VLN --> T1
-    N5 -- tākaro rangatahi --> T2
-    N3 -- raraunga wāwāhi --> T3
-    N2 -- raraunga marae / whānau --> T3
-    N1 -- mahika kai pūkenga --> T4
-    N4 -- pūkenga kura --> T4
-    N2 -- kaupapa ā-motu --> T5
-    N5 -- kaupapa ā-mua --> T5
-    L2 -- kaihaukai mātauraka --> T6
-
+    N6 -- korero --> T1
+    N5 -- takaro --> T2
+    N3 -- raraunga --> T3
+    N2 -- raraunga --> T3
+    N1 -- mahika-kai --> T4
+    N4 -- pukenga --> T4
+    N2 -- kaupapa --> T5
+    N5 -- kaupapa --> T5
+    L2 -- kaihaukai --> T6
     T1 --> P3
     T2 --> P1
     T2 --> P5
     T3 --> P4
     T3 --> P6
-    T4 --
+    T4 --> P2
+    T4 --> P6
+    T5 --> P5
+    T6 --> P2
+    S1 -.-> T3
+    S2 -.-> L3
+    S3 -.-> T2
+    S4 -.-> T3
+    S5 -.-> T5
+    S6 -.-> T6
+    classDef takarangi fill:#fff2,stroke:#666,stroke-dasharray:3 3;
+    classDef ngaru fill:#def2ff,stroke:#0077b6;
+    classDef mahikaKai fill:#fef4e6,stroke:#c88719;
+    classDef kaihaukai fill:#ffeef2,stroke:#b32653;
+    classDef mangopare fill:#e9f5ec,stroke:#2b7a3b;
+    class A takarangi;
+    class T1,T2,T3,T4,T5,T6 takarangi;
+    class T3,P4,P6 mangopare;
+    class T4,N1,N4 mahikaKai;
+    class T5,P5,N2 kaihaukai;
+    class P1,P2,P3,P5,P6 ngaru;
+</pre>
+</div>
+
+<footer style="margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.85rem;opacity:.8">
+<a href="https://robertmccallnz.github.io/six-thinkers/">The Kiwi Dialectic</a> · Ōtepoti / Dunedin · CC BY-SA 4.0
+</footer>
+<script>
+const h=document.documentElement,b=document.getElementById('tt');
+const s=localStorage.getItem('kd-theme')||'light';h.setAttribute('data-theme',s);b.textContent=s==='dark'?'Light':'Dark';
+b.addEventListener('click',e=>{e.preventDefault();const c=h.getAttribute('data-theme'),n=c==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem
